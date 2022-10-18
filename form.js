@@ -38,7 +38,7 @@ let flat = newInput('flat','text','Flat number','flat');
     flat.setAttribute('pattern',"[0-9][0-9,-]{1,15}");
 
  //// Check data validity
-function getToday() {
+ function getToday() {
     let now = new Date().toString();
     let year = now.slice(11,15);
     let day = +now.slice(8,10) + 1;
@@ -142,11 +142,12 @@ let gift = document.createElement('select');
             }
         }
     });
+
 let label = newLabel('Choose 2 gifts','gift');
     div.append(gift);
 
   ///// Buttons and whole form validation
-function toValidate(form) {
+  function toValidate(form) {
     if (form.checkValidity() === false) {
         complete.disabled = true;
     } else {
@@ -188,25 +189,3 @@ let back = document.createElement('a');
     back.innerHTML = '<span>To the main page</span>';
     back.setAttribute('href','index.html')
     form.append(back);
-
-
-//// Final message
-form.addEventListener("submit", function(event) {
-    event.preventDefault();
-    alert(`The order created. Dear ${userName.value} ${userSurname.value}, your parcel will come ${dateOfDelivery.value} to ${street.value} street, house: ${house.value}, flat: ${flat.value}. Thanks for choosing our shop!`);
-    form.submit();
-});
-
-//// Saving data
-if (window.localStorage) {
-    let elements = document.querySelectorAll('[id]');
-    for (let i = 0; i < elements.length; i++) {
-      (function(element) {
-        let name = element.getAttribute('name');
-        element.value = localStorage.getItem(name) || element.value;
-        element.onkeyup = function() {
-          localStorage.setItem(name, element.value);
-        };
-      })(elements[i]);
-    }
-}
