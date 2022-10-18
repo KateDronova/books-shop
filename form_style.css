@@ -1,0 +1,132 @@
+:root {
+    --color-accent-light: #fc9964;
+    --color-accent: #e67056;
+    --color-blue-dark: #1a3198;
+    --color-blue: #95b1ba;
+    --color-blue-light: #b7dce9;
+    --color-grey-xs:#fdfdfd;
+    --color-grey-s: #e6e6e6;
+    --color-grey-l: #aaaaaa;
+    --color-grey-xl: #747474;
+    --color-grey-3xl: #171717;
+}
+
+body {
+    margin: 0px;
+    background-color:var(--color-blue);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+}
+
+main {
+    background-color: var(--color-grey-xs);
+    width: 1200px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+form {
+    width: 580px;
+    height: 650px;
+    padding: 15px;
+    padding-top: 20px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: var(--color-blue-light);
+    border: 5px solid var(--color-blue-dark);
+    border-radius: 15px;
+    line-height: 1.3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+div {
+    padding: 20px;
+    width: 400px;
+    height: 440px;
+    border: 1px solid var(--color-grey-l);
+    display: grid;
+    grid-template-columns: 110px 215px;
+    align-items: center;
+    gap: 15px;
+}
+
+input, select {
+    padding: 3px 15px;
+    background-color: var(--color-grey-xs);
+    border: 2px solid var(--color-blue);
+    border-radius: 8px;
+}
+
+select {
+    width: 280px;
+    overflow:visible;
+}
+
+fieldset {
+    padding: 0px;
+    margin: 0px;
+    margin-top: 5px;
+    grid-column: span 2;
+    border: 1px solid var(--color-grey-l);
+}
+
+input:invalid, select:invalid, .invalid {
+    border: 2px solid var(--color-accent);
+}
+
+input:invalid:focus, select:invalid:focus {
+    border: 2px solid var(--color-blue);
+}
+
+span.error {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 5px;
+    padding: 6px 10px;
+    border: 1px solid var(--color-grey-xl);
+    border-radius: 1px;
+    color: var(--color-accent);
+    background-color: var(--color-grey-xs);
+    font-style: italic;
+    z-index: 2;
+}
+
+input[type = "reset"] {
+    cursor: pointer;
+    width: 100px;
+    background-color: var(--color-grey-xs);
+    border: none;
+}
+
+input[type = "submit"] {
+    cursor: pointer;
+    width: 120px;
+    font-weight: bold;
+    padding: 5px;
+    background-color: var(--color-grey-xs);
+    border: none;
+}
+
+input[type = "radio"] {
+    width: min-content;
+    margin-right: 5px;
+}
+
+a {
+    color: var(--color-grey-3xl);
+}
+
+h2 {
+    margin: 5px;
+}
+
+ul {
+    list-style-type: none;
+
+}
