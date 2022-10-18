@@ -189,3 +189,24 @@ let back = document.createElement('a');
     back.innerHTML = '<span>To the main page</span>';
     back.setAttribute('href','index.html')
     form.append(back);
+
+//// Final message
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    alert(`The order created. Dear ${userName.value} ${userSurname.value}, your parcel will come ${dateOfDelivery.value} to ${street.value} street, house: ${house.value}, flat: ${flat.value}. Thanks for choosing our shop!`);
+    form.submit();
+});
+
+//// Saving data
+if (window.localStorage) {
+    let elements = document.querySelectorAll('[id]');
+    for (let i = 0; i < elements.length; i++) {
+      (function(element) {
+        let name = element.getAttribute('name');
+        element.value = localStorage.getItem(name) || element.value;
+        element.onkeyup = function() {
+          localStorage.setItem(name, element.value);
+        };
+      })(elements[i]);
+    }
+}
