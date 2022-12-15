@@ -45,14 +45,14 @@ form {
 }
 
 div {
-    padding: 20px;
-    width: 400px;
+    padding: 30px;
+    width: 420px;
     height: 440px;
     border: 1px solid var(--color-grey-l);
     display: grid;
     grid-template-columns: 110px 215px;
     align-items: center;
-    gap: 15px;
+    gap: 14px;
 }
 
 input, select {
@@ -63,15 +63,16 @@ input, select {
 }
 
 select {
-    width: 280px;
+    width: 300px;
     overflow:visible;
 }
 
 fieldset {
+    display: grid;
+    grid-column: span 2;
     padding: 0px;
     margin: 0px;
     margin-top: 5px;
-    grid-column: span 2;
     border: 1px solid var(--color-grey-l);
 }
 
@@ -128,5 +129,5 @@ h2 {
 
 ul {
     list-style-type: none;
-
+    margin: 0px;
 }

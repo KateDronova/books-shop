@@ -1,11 +1,12 @@
 
-///////// Given JSON file
-const books = [{
-    "author": "Douglas Crockford",
-    "imageLink": "assets/images/Douglas-Crockford.jpg",
-    "title": "JavaScript: The Good Parts: The Good Parts",
-    "price": 30,
-    "description": "With JavaScript: The Good Parts, you'll discover a beautiful, elegant, lightweight and highly expressive language that lets you create effective code, whether you're managing object libraries or just trying to get Ajax to run fast. If you develop sites or applications for the Web, this book is an absolute must"
+/////// Given JSON file
+const books = [
+    {
+      "author": "Douglas Crockford",
+      "imageLink": "assets/images/Douglas-Crockford.jpg",
+      "title": "JavaScript: The Good Parts: The Good Parts",
+      "price": 30,
+      "description": "With JavaScript: The Good Parts, you'll discover a beautiful, elegant, lightweight and highly expressive language that lets you create effective code, whether you're managing object libraries or just trying to get Ajax to run fast. If you develop sites or applications for the Web, this book is an absolute must"
     },
     {
       "author": "David Herman",
@@ -70,7 +71,13 @@ const books = [{
       "price": 33,
       "description": "Secrets of the Javascript Ninja takes you on a journey towards mastering modern JavaScript development in three phases: design, construction, and maintenance. Written for JavaScript developers with intermediate-level skills, this book will give you the knowledge you need to create a cross-browser JavaScript library from the ground up."
     }
-  ]
+]
+// /////////Accessing to JSON
+// fetch('./assets/books.json') //path to the file with json data
+//         .then(response => response.json())
+//         .then(data => {
+//             console.log(data);
+//         });
 
 /////////Creating all the elements for layout
 function newDiv(elemName, elemTag, classToAdd, textContent) {

@@ -3,10 +3,52 @@
     <head>
         <title>Books Shop</title>
         <link rel="stylesheet" href="form_style.css">
+        <link rel="stylesheet" href="normalize.css">
         <meta charset="utf-8">
     </head>
     <body>
-        <form>
+        <form action="#" method="post">
+            <h2>Order form</h2>
+            <div>
+                <label for="name">Name</label>
+                <input type="text" name="userName" id="name" pattern="[a-z,A-Z]{4,15}" required>
+                <label for="surname">Surname</label>
+                <input type="text" name="userSurname" id="surname" pattern="[a-z,A-Z]{5,20}" required>
+                <label for="street">Street</label>
+                <input type="text" name="street" id="street" pattern="[0-9,a-z,A-Z]{5,15}" required>
+                <label for="house">House number</label>
+                <input type="text" name="house" id="house" pattern="[0-9]{1,15}" required>
+                <label for="flat">Flat number</label>
+                <input type="text" name="flat" id="flat" pattern="[0-9][0-9,-]{1,15}" required>
+                <label for="date">Delivery Date</label>
+                <input type="date" name="date" id="date" required>
+                <fieldset>
+                    <legend>Choose pay method</legend>
+                    <ul>
+                        <li>
+                            <input type="radio" name="payMethod" value="Cash to the courier" id="cash" required>
+                            <label for="cash">Cash to the courier</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="payMethod" value="Bank Card" id="card" required>
+                            <label for="card">Bank Card</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <label for="gift">Choose 2 gifts</label>
+                <select name="gift" id="gift" size="4" multiple>
+                    <option value="pack" selected>pack as a gift</option>
+                    <option value="addPost" selected>add postcard</option>
+                    <option value="discountLater">provide 2% discount to the next time</option>
+                    <option value="pen">branded pen or pencil</option>
+                </select>
+            </div>
+            <span class="error">The field is invalid</span>
+            <input type="submit" value="Complete">
+            <input type="reset" value="Reset">
+            <a href="index.html">
+                <span>To the main page</span>
+            </a>
         </form>
         <script src="form.js"></script>
     </body>
