@@ -17,6 +17,7 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 500;
     letter-spacing: 0.05em;
+    user-select: none;
 }
 
 main {
@@ -64,6 +65,7 @@ div.shopCart {
     border: 5px solid var(--color-accent-light);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    box-shadow: 0px 2px 15px 0px var(--color-grey-3xl);
     z-index: 1;
 }
 
@@ -78,6 +80,7 @@ div.cartWindow {
     border: 5px solid var(--color-grey-l);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    box-shadow: 0px 0px 15px 2px var(--color-grey-3xl);
 }
 
 div.chosen {
@@ -119,6 +122,11 @@ div.card {
     text-align: center;
 }
 
+div.card:hover {
+    cursor: move;
+    box-shadow: 0px 0px 4px var(--color-grey-3xl);
+}
+
 .card div {
     width: 160px;
     height: 200px;
@@ -130,6 +138,7 @@ img {
     height: 200px;
     width: auto;
     border: 1px solid var(--color-grey-3xl);
+    box-shadow: 0px 0px 5px 1px var(--color-blue-dark);
 }
 
 button, a {
@@ -164,13 +173,23 @@ button.show:hover {
 }
 
 button.close {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     padding: 0px;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
     text-align: center;
     color: var(--color-grey-xs);
+    background-color: var(--color-accent-light);
+    border-radius: 50%;
+}
+
+.annot button.close {
+    width: 30px;
+    height: 30px;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
     background-color: var(--color-accent);
-    border-radius: 3px;
 }
 
 a.confOrder {
@@ -209,13 +228,13 @@ p {
 
 div.annot {
     width: 420px;
-    height: 450px;
-    padding: 40px 60px 25px;
+    height: 460px;
+    padding: 30px 60px 25px;
     position: fixed;
     top: 8%;
     left: 3.5%;
     border-radius: 15px;
-    border: 8px solid var(--color-grey-xl);
+    border: 10px solid var(--color-grey-xs);
     background-color: var(--color-blue-light);
     display: flex;
     flex-direction: column;
@@ -223,10 +242,17 @@ div.annot {
     align-items: center;
     text-align: center;
     line-height: 140%;
+    box-shadow: 3px 0px 15px 2px var(--color-grey-3xl);
 }
 
 div.annot button.close {
     position: absolute;
     top: 15px;
     right: 15px;
+}
+
+.dropping {
+    transform: scale(1.05);
+    transition: 200ms ease-out;
+    font-size: 1.1rem;
 }
