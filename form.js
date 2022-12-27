@@ -39,7 +39,7 @@ function toValidate(form) {
     complete.disabled = !form.checkValidity();
 }
 
-let error = document.querySelector('span');
+let error = document.querySelector('.error');
 let complete = document.querySelector('[type="submit"]');
 
 toValidate(form);
